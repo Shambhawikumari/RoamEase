@@ -21,7 +21,9 @@ const userRouter = require("./routes/user.js");
 
 const port = 5500;
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+//const MONGO_URL = "mongodb://127.0.0.1:27017/wanderlust";
+const MONGO_URL = process.env.MONGO_URL;
+
 
 main().then(()=>{
     console.log("connected to DB");
